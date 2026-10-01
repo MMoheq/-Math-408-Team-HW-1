@@ -5,7 +5,7 @@ printf "monem \n";
 model Ks_monem.mod; 
 data Knapsack.dat; 
 
-option solver gurobi; 
+option solver cplex; 
 
 solve;        
 
@@ -29,7 +29,7 @@ printf "sofie \n";
 model Ks_sofie.mod; 
 data Knapsack.dat; 
 
-option solver gurobi; 
+option solver cplex; 
 
 solve;        
 
@@ -52,7 +52,7 @@ printf "sun \n";
 model Ks_sun.mod; 
 data Knapsack.dat; 
 
-option solver gurobi; 
+option solver cplex; 
 
 solve;        
 
@@ -75,7 +75,7 @@ printf "finley \n";
 model Ks_finley.mod; 
 data Knapsack.dat; 
 
-option solver gurobi; 
+option solver cplex; 
 
 solve;        
 
@@ -93,10 +93,12 @@ display sum {j in X} a4[j] / 2;
 
 printf"-==-=-=-==-=-=-==-=-=-=-=-=-=--=-=-=-=-=--==-=-===-=-=-=-=-====----==--===-==----==- \n";
 reset;
-printf "Solution to team knapsack problem \n";
+printf "Solution to team knapsack relaxation problem \n";
 model Knapsack.mod; 
 data Knapsack.dat
 
-option solver gurobi; 
+option solver cplex; 
 
 solve;
+
+display x;

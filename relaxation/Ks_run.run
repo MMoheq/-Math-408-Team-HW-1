@@ -1,0 +1,102 @@
+printf "-=--==-==-=-=---=-=-==-=-==-=-=-=-=-=-=-==-==-=-=-=---==-===-=-=-=-=-=-=--=-=-=-=-==-=-=---=-=---- \n";
+reset; 
+
+printf "monem \n";
+model Ks_monem.mod; 
+data Knapsack.dat; 
+
+option solver gurobi; 
+
+solve;        
+
+printf "constraint values \n";
+display sum {j in X} a1[j]*x[j];
+display sum {j in X} a2[j]*x[j];
+display sum {j in X} a2[j]*x[j];
+display sum {j in X} a2[j]*x[j];
+
+printf "constraint bounds \n";
+display sum {j in X} a1[j] / 2;
+display sum {j in X} a2[j] / 2;
+display sum {j in X} a3[j] / 2;
+display sum {j in X} a4[j] / 2;
+
+
+printf "-=--==-==-=-=---=-=-==-=-==-=-=-=-=-=-=-==-==-=-=-=---==-===-=-=-=-=-=-=--=-=-=-=-==-=-=---=-=---- \n";
+reset; 
+printf "sofie \n";
+
+model Ks_sofie.mod; 
+data Knapsack.dat; 
+
+option solver gurobi; 
+
+solve;        
+
+printf "constraint values \n";
+display sum {j in X} a1[j]*x[j];
+display sum {j in X} a2[j]*x[j];
+display sum {j in X} a2[j]*x[j];
+display sum {j in X} a2[j]*x[j];
+
+printf "constraint bounds \n";
+display sum {j in X} a1[j] / 2;
+display sum {j in X} a2[j] / 2;
+display sum {j in X} a3[j] / 2;
+display sum {j in X} a4[j] / 2;
+
+printf "-=--==-==-=-=---=-=-==-=-==-=-=-=-=-=-=-==-==-=-=-=---==-===-=-=-=-=-=-=--=-=-=-=-==-=-=---=-=---- \n";
+reset; 
+printf "sun \n";
+
+model Ks_sun.mod; 
+data Knapsack.dat; 
+
+option solver gurobi; 
+
+solve;        
+
+printf "constraint values \n";
+display sum {j in X} a1[j]*x[j];
+display sum {j in X} a2[j]*x[j];
+display sum {j in X} a2[j]*x[j];
+display sum {j in X} a2[j]*x[j];
+
+printf "constraint bounds \n";
+display sum {j in X} a1[j] / 2;
+display sum {j in X} a2[j] / 2;
+display sum {j in X} a3[j] / 2;
+display sum {j in X} a4[j] / 2;
+
+printf "-=--==-==-=-=---=-=-==-=-==-=-=-=-=-=-=-==-==-=-=-=---==-===-=-=-=-=-=-=--=-=-=-=-==-=-=---=-=---- \n";
+reset; 
+printf "finley \n";
+
+model Ks_finley.mod; 
+data Knapsack.dat; 
+
+option solver gurobi; 
+
+solve;        
+
+printf "constraint values \n";
+display sum {j in X} a1[j]*x[j];
+display sum {j in X} a2[j]*x[j];
+display sum {j in X} a2[j]*x[j];
+display sum {j in X} a2[j]*x[j];
+
+printf "constraint bounds \n";
+display sum {j in X} a1[j] / 2;
+display sum {j in X} a2[j] / 2;
+display sum {j in X} a3[j] / 2;
+display sum {j in X} a4[j] / 2;
+
+printf"-==-=-=-==-=-=-==-=-=-=-=-=-=--=-=-=-=-=--==-=-===-=-=-=-=-====----==--===-==----==- \n";
+reset;
+printf "Solution to team knapsack problem \n";
+model Knapsack.mod; 
+data Knapsack.dat
+
+option solver gurobi; 
+
+solve;
